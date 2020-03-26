@@ -1,0 +1,34 @@
+html {
+  min-height: 100%;
+}
+
+header{
+background: #3b5998;
+padding-top: 20px;
+}
+body {
+  font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+  background: linear-gradient(white, #D3D8E8);
+  min-height: 100vh;
+}
+
+header label{
+  color: white;
+}
+.err {
+  font-size: small;
+  color: red;
+}
+small{
+  font-size: 60%;
+}
+body, h1, label{
+  font-weight: bold;
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+}
