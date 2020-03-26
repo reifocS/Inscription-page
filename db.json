@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "test",
+      "firstname": "test",
+      "lastname": "testest",
+      "birthday": "2020-03-07",
+      "gender": "male"
+    }
+  ]
+}
