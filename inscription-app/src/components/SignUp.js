@@ -69,21 +69,21 @@ export default class SignUp extends Component {
             <form ref={(el) => this.myFormRef = el} onSubmit={this.onSubmit}>
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                        <input type="text" onChange={this.handleChange} className="form-control" name="firstname" placeholder="Prénom" required />
+                        <input type="text" value={this.state.firstname} onChange={this.handleChange} className="form-control" name="firstname" placeholder="Prénom" required />
                     </div>
                     <div className="form-group col-md-6">
-                        <input type="text" onChange={this.handleChange} className="form-control" name="lastname" placeholder="Nom de famille" required />
+                        <input type="text" value={this.state.lastname} onChange={this.handleChange} className="form-control" name="lastname" placeholder="Nom de famille" required />
                     </div>
                 </div>
                 <div className="form-group">
-                    <input type="email" onChange={this.handleChange} className="form-control mb-3" name="email" placeholder="Adresse e-mail" required />
+                    <input type="email" value={this.state.email} onChange={this.handleChange} className="form-control mb-3" name="email" placeholder="Adresse e-mail" required />
                     {this.state.errors.confirmEmail && <span className="err">{this.state.errors.confirmEmail}</span>}
-                    <input type="email" onChange={this.handleChange} className="form-control mb-3" name="confirmEmail" placeholder="Confirmer votre e-mail"
+                    <input type="email" value={this.state.confirmEmail} onChange={this.handleChange} className="form-control mb-3" name="confirmEmail" placeholder="Confirmer votre e-mail"
                         required />
-                    <input type="password" onChange={this.handleChange} className="form-control mb-3" name="password" placeholder="Mot de passe" required />
+                    <input type="password" value={this.state.password} onChange={this.handleChange} className="form-control mb-3" name="password" placeholder="Mot de passe" required />
                     <div className="col-md-4">
                         <label htmlFor="inputBirthdate">Date de naissance</label>
-                        <input type="date" onChange={this.handleChange} className="form-control mb-3" name="birthday" placeholder="JJ/MM/AAAA" required />
+                        <input type="date" value={this.state.birthday} onChange={this.handleChange} className="form-control mb-3" name="birthday" placeholder="JJ/MM/AAAA" required />
                         <div className="form-check mb-3">
                             <div className="custom-control custom-radio custom-control-inline">
                                 <input type="radio" onChange={this.handleChange} id="customRadioInline1" name="gender" value="male" className="custom-control-input" required />
