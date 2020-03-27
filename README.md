@@ -1,5 +1,7 @@
 # How to use
 
+## 0 install NODEJS if you dont have it  
+https://nodejs.org/en/
 
 ## 1 clone the repository
 `git clone https://github.com/reifocS/Inscription-page.git`  
