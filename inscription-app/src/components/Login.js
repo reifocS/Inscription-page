@@ -39,8 +39,7 @@ export default class Login extends Component {
         }
         let response = await authentificate(user);
         console.log(response)
-        this.setState({ isLoggedIn: response });
-        this.cancelCourse();
+        this.setState({ isLoggedIn: response }, this.cancelCourse);
     }
 
     render() {
@@ -50,11 +49,11 @@ export default class Login extends Component {
                 <form ref={(el) => this.myFormRef = el} onSubmit={this.onSubmit} className="form-row">
                     <div className="form-group col-md-5">
                         <label>Adresse e-mail ou mobile</label>
-                        <input type="text" onChange={this.updateEmail} className="form-control" placeholder="Votre email" required />
+                        <input type="text" value={this.state.email.value} onChange={this.updateEmail} className="form-control" placeholder="Votre email" required />
                     </div>
                     <div className="form-group col-md-5">
                         <label>Mot de passe</label>
-                        <input type="password" onChange={this.updatePassword} className="form-control" placeholder="Votre mot de passe" required />
+                        <input type="password" value={this.state.password.value} onChange={this.updatePassword} className="form-control" placeholder="Votre mot de passe" required />
                     </div>
                     <div className="form-group col-md-2">
                         <label>&nbsp;</label>
